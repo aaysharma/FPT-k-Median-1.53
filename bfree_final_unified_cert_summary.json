@@ -1,0 +1,10 @@
+{
+  "rho": "152999/100000",
+  "description": "Final B-free reduced 180-case certificate; indices 0-167 use layer-a chord checker, indices 168-179 use layer-a chord plus layer-1 GSinf degree-8 Taylor upper.",
+  "total_cases": 180,
+  "count": 180,
+  "bad_count": 0,
+  "missing": [],
+  "max_nodes": 88,
+  "min_certificate_value": "21800509/121399490625"
+}

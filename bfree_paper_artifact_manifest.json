@@ -1,0 +1,43 @@
+{
+  "pdf": "bfree_paperstyle_full.pdf",
+  "source": [
+    "bfree_paperstyle_full.tex",
+    "bfree_paperstyle_algorithm_section.tex"
+  ],
+  "main_claim": "Unified B-free soft-LP local factor <= 153/100",
+  "algorithm_rule": "L={G: d_G <= (3/(2+eps))*d_1}; C={G: d_G <= 3*d_1}",
+  "parameters": {
+    "epsilon": "7/50",
+    "p1": "3/14",
+    "p_s_small": "6/13",
+    "p_s_large": "1"
+  },
+  "finite_certificate_detailed_results": "bfree_final_unified_cert_complete_results.json",
+  "final_checker": "stored detailed JSON verified by verify_submit_ready_artifacts.py",
+  "tail_checkers": [
+    "ipco_tail_chord5_cert_bfree.py",
+    "gs_tail_chord13_cert.py"
+  ],
+  "fast_verifier": "verify_submit_ready_artifacts.py",
+  "certificate_status": {
+    "cases": 180,
+    "passed": 180,
+    "failures": 0,
+    "rho0": "152999/100000",
+    "max_nodes": 88,
+    "min_certificate_value": "21800509/121399490625"
+  },
+  "notes": "Detailed row-by-row final Bernstein output is included as bfree_final_unified_cert_complete_results.json. The fast verifier validates the stored certificate and spot-regenerates representative rows from both checker components. The optional bfree_regenerate_final_certificate.py wrapper produces a valid current-format 180-case certificate but is not claimed to reproduce every metadata field of the packaged historical JSON byte-for-byte. The assignment rule uses centers up to 3d_1 and leaders up to a d_1; the center-only layer is reduced analytically to the layer-a envelope before invoking the 180-case certificate.",
+  "problem_scope": "center-opening metric k-median: client points/leaders are legal centers; supplier variant is not claimed",
+  "runtime_claim": "f(k) n^{O(1)} after Lemma scale-reduction with D_zeta=(log n)^{O(1)} poly(k,1/zeta) and the kh-adjusted FPT split",
+  "legacy_chord_checker": "bfree_final_chord_cert.py",
+  "large_group_R_assumption": "R >= 13",
+  "zero_distance_handling": "Lemmas zero-distance-supported-edge and zero-closest-object handle averaged d_1=0 before normalization; no claim that zero-distance contraction implies d_1>0.",
+  "final_checker_components": {
+    "cases_0_167": "bfree_final_chord_cert.py",
+    "cases_168_179": "bfree_final_mixedexp_cert_fast.py"
+  },
+  "mixedexp_checker": "bfree_final_mixedexp_cert_fast.py",
+  "runtime_split_note": "The enumeration exponent is O(kh) with h=Theta(k^{delta_1} log log n); the proof splits on k^{1+delta_1}(log log n)^2 <= c log n, not the smaller Anand-Lee O(k) exponent.",
+  "certificate_regeneration": "bfree_regenerate_final_certificate.py regenerates a valid certificate in the current checker format; rows may not be byte-for-byte identical to the historical stored JSON metadata."
+}
